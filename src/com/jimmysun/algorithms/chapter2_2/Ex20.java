@@ -2,6 +2,10 @@ package com.jimmysun.algorithms.chapter2_2;
 
 import edu.princeton.cs.algs4.In;
 
+
+/*
+间接排序：不改变数组的归并排序
+ */
 public class Ex20 {
 	private static int[] aux;
 

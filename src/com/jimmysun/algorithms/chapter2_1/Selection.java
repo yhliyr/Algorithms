@@ -6,16 +6,21 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
+/**
+ * 选择排序
+ */
 public class Selection {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
-		for (int i = 0; i < N; i++) {
+		for (int i = 0; i < N; i++) { // 从头遍历 i
 			int min = i;
-			for (int j = i + 1; j < N; j++) {
-				if (less(a[j], a[min])) {
+			// 找出 i 之后最小的数
+			for (int j = i + 1; j < N; j++) { // 选择之后的元素 j
+				if (less(a[j], a[min])) { // 比较、如果 j 比 i 小
 					min = j;
 				}
 			}
+			// 将最小的数移动到 i 的位置
 			exch(a, i, min);
 		}
 	}

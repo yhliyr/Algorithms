@@ -3,6 +3,12 @@ package com.jimmysun.algorithms.chapter2_2;
 import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdOut;
 
+/*
+改进
+1. 加快小数组的排序速度
+2. 检测数组是否已经有序
+3. 以及通过在递归中交换参数来避免数组复制
+ */
 public class Ex11 {
 	private static int CUTOFF = 15;
 

@@ -6,10 +6,16 @@ import edu.princeton.cs.algs4.In;
 import edu.princeton.cs.algs4.StdDraw;
 import edu.princeton.cs.algs4.StdOut;
 
+/*
+插入排序
+对于未排序数据，在已排序序列中从后向前扫描，找到相应位置并插入
+ */
 public class Insertion {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
 		for (int i = 0; i < N; i++) {
+			// 遍历 i
+			// j： 未排序序列首元素，向已排序序列遍历，如果 j < j-1 则交换
 			for (int j = i; j > 0 && less(a[j], a[j - 1]); j--) {
 				exch(a, j, j - 1);
 			}

@@ -7,7 +7,7 @@ public class Ex06 {
 		int f = 0;
 		int g = 1;
 		for (int i = 0; i <= 15; i++) {
-			StdOut.println(f);
+			StdOut.println(f);//0 1 1 2
 			f = f + g;
 			g = f - g;
 		}

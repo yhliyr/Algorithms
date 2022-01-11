@@ -2,15 +2,21 @@ package com.jimmysun.algorithms.chapter2_1;
 
 import edu.princeton.cs.algs4.StdOut;
 
+/**
+ * 不需要交换的插入排序
+ */
 public class Ex25 {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
 		for (int i = 1; i < N; i++) {
 			Comparable temp = a[i];
 			int j = i;
+			// 将 a[i] 插入到已排序的列表中
+			// 插入的方式是将原来的列表中较大的元素右移
 			for (; j > 0 && less(temp, a[j - 1]); j--) {
 				a[j] = a[j - 1];
 			}
+			// 比较完后将 a[i] 放在合适的位置
 			a[j] = temp;
 		}
 	}

@@ -2,6 +2,13 @@ package com.jimmysun.algorithms.chapter2_1;
 
 import edu.princeton.cs.algs4.StdOut;
 
+/**
+ * 插入排序的哨兵
+ * 在插入排序的实现中，先找出最小的元素并将其置于数组最左边
+ * 这样就能去掉内循环的判断条件 j > 0
+ * ps: 这是一种常见的规避边界测试的方法，
+ * 能够省略判断条件的元素通常称为哨兵
+ */
 public class Ex24 {
 	public static void sort(Comparable[] a) {
 		int N = a.length;
